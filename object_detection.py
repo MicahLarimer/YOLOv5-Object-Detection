@@ -46,7 +46,7 @@ def detect_webcam():
         results.render()  # Draw bounding boxes on the frame
 
         # Calculate FPS (frames per second)
-        fps = 1.0 / (time.time() - start_time)  # FPS = 1 / time taken for one loop
+        fps = 20.0 / (time.time() - start_time)  # FPS = 1 / time taken for one loop
         cv2.putText(frame, f"FPS: {int(fps)}", (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
         cv2.imshow("YOLOv5 Real-Time Detection", frame)  # Show the output frame
